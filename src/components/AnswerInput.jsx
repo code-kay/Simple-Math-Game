@@ -18,7 +18,7 @@ const InputContainer = styled.div`
 
 const StyledInput = styled.input`
     z-index: 3;
-    width: 60vw;
+    width: 80vw;
     margin-top: 5vh;
     border-radius: 1vh;
     padding: 20px;
@@ -55,7 +55,7 @@ function AnswerInput ({game, gameCount, gameMode, currentGame, setCurrentGame, s
     }
     return (
         <InputContainer>
-            <StyledInput onKeyDown={answerCheck} />
+            <StyledInput onKeyDown={answerCheck} type='number' />
         </InputContainer>
     )
 }

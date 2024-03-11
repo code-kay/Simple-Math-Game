@@ -18,7 +18,7 @@ const ButtonsContainer = styled.div`
 `
 
 function DifficultySelect ({setDifficulty}) {
-    const difficulties = [[10, '쉬움 😆'], [100, '보통 😐 '], [1000, '어려움 🤯']]
+    const difficulties = [[10, '😆'], [100, '😐 '], [1000, '🤯']]
     return (
         <Container>
             <Text>난이도는 어떻게 할까?</Text>
