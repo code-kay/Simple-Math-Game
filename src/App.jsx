@@ -48,13 +48,13 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header isPlaying={games.length !== 0} gameResetHandler={gameResetHandler} />
       <Main>
         { !isStarted ? <GameStart setIsStarted={setIsStarted} />
           : !gameMode ? <GameModeSelect setGameMode={setGameMode} />
           : !difficulty ?  <DifficultySelect setDifficulty={setDifficulty} />
           : !gameCount ? <GameCountSelect setGameCount={setGameCount} />
-          : currentGame < gameCount ? <GamePlay gameMode={gameMode} games={games} gameCount={gameCount} currentGame={currentGame} setCurrentGame={setCurrentGame} setTime={setTime} />
+          : currentGame < gameCount ? <GamePlay gameMode={gameMode} games={games} gameCount={gameCount} currentGame={currentGame} setCurrentGame={setCurrentGame} setTime={setTime}/>
           : <GameClear gameResetHandler={gameResetHandler} gameCount={gameCount} time={time}/> }
       </Main>
     </>

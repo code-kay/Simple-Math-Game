@@ -24,7 +24,7 @@ function GameModeSelect ({setGameMode}) {
         <Container>
             <Text>어떤 게임을 할까?</Text>
             <ButtonsContainer>
-                {gameModes.map(gameMode => <Button key={gameMode} operator={true} width={100} height={100} content={gameMode} eventHandler={() => setGameMode(gameMode)}/> )}
+                {gameModes.map(gameMode => <Button key={gameMode} operator={true} width={100} height={100} fontSize='2.4rem' content={gameMode} eventHandler={() => setGameMode(gameMode)}/> )}
             </ButtonsContainer>
         </Container>
     )

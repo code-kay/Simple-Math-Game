@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
 const StyledGame = styled.li`
-    font-size: 8vh;
+    font-size: 7vh;
     text-align: center;
     height: 16vh;
     line-height: 16vh;
+    flex-shrink: 0;
     list-style: none;
     ${props => props.$isCurrentGame ? 'color: blue;' : ''}
     transition: color 0.5s;

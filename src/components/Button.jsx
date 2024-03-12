@@ -3,11 +3,10 @@ import buttonSound from '../assets/button.mp3'
 
 const StyledButton = styled.button`
     color: black;
-    ${(props) => props.operator ? '' : 'padding: 40px;'}
-    width: ${(props) => props.operator ? '100px' : 'auto' };
-    height: ${(props) => props.operator ? '100px' : 'auto' };
+    width: ${(props) => props.width ? props.width + 'px' : '100px' };
+    height: ${(props) => props.height ? props.height + 'px' : '100px' };
     border-radius: 10px;
-    font-size: ${(props) => props.operator ? '2.4rem' : '1.2rem' };
+    font-size: ${(props) => props.fontSize? props.fontSize : '1.2rem' };
 
     &:hover {
         background-color: darkgray;
@@ -18,13 +17,13 @@ const StyledButton = styled.button`
     }
 `
 
-function Button ({content, width, height, operator, eventHandler}) {
+function Button ({content, width, height, fontSize, eventHandler}) {
     const onClickHandler = () => {
         eventHandler()
         const button = new Audio(buttonSound)
         button.play()
     }
-    return <StyledButton width={width} height={height} operator={operator} onClick={onClickHandler} >{content? content : 'hi'}</StyledButton>
+    return <StyledButton width={width} height={height} fontSize={fontSize} onClick={onClickHandler} >{content? content : 'hi'}</StyledButton>
 }
 
 export default Button
